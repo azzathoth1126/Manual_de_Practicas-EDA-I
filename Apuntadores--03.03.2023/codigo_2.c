@@ -4,7 +4,7 @@
 
 /*  Este programa crea un apuntador de tipo entero y modifica la información a través del mismo.   */
 
-int main () {
+int main (){
     short a = 5, b = 10;
     short *apEnt;
     apEnt = &a;
