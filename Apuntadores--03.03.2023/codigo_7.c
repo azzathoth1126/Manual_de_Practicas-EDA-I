@@ -14,5 +14,7 @@ int main(){
         printf("%x\t",(ap+indice));
     }
 
+    printf("\n\n");
+
 return 0;
 }
