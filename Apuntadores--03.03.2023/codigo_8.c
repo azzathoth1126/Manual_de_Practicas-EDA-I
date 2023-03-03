@@ -20,7 +20,7 @@ int main(){
         printf("\n\t*** CIFRADO CÉSAR ***\n");
         for (contador=0 ; contador<26; contador++)
             printf("%c", *(abecedarioEnClaro+contador));
-        printf("\n");
+            printf("\n");
         for (contador=0 ; contador<26; contador++)
             printf("%c", *(abecedarioCifrado+contador));
         printf("\nElegir una opción:\n");
