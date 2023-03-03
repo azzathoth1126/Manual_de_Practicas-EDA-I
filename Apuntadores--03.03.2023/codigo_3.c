@@ -8,12 +8,14 @@ int main () {
     apArr = &arr[0];
 
     // imprime la dirección de memoria del arreglo en la posición [0]
-    printf("Dirección del arreglo en la primera posición: %x\n",&arr[0]);
+    printf("Dirección del arreglo en la primera posición: %p\n",&arr[0]);
+
     // imprime la dirección de memoria del arreglo
     // (el nombre del arreglo es un apuntador)
-    printf("Dirección del arreglo: %x\n",&arr);
+    printf("Dirección del arreglo: %p\n",&arr);
+
     // imprime la dirección de memoria del apuntador apArr
-    printf("Dirección del apuntador: %x\n",apArr);
+    printf("Dirección del apuntador: %p\n",apArr);
 
     return 0;
 }
