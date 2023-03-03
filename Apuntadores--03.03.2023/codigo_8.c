@@ -27,6 +27,7 @@ int main(){
         printf("1) Cifrar\n");
         printf("2) Descifrar.\n");
         printf("3) Salir.\n");
+        printf("Eleccion: ");
         scanf("%d", &opcion);
 
         switch(opcion){
@@ -45,7 +46,7 @@ int main(){
             case 3:
                 return 0;
             default:
-                printf("Opción no válida.");
+                printf("Opción no válida.\n");
         }
     }
     return 0;
