@@ -5,7 +5,7 @@
 /*  Este programa crea un apuntador de tipo carácter.   */
 
 int main (){
-    char *ap, ;
+    char *ap, c;
     c = 'x';
     ap = &c;
 
