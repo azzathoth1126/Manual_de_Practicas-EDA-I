@@ -70,3 +70,5 @@ void imprimirArreglo(struct pelicula arreglo [TAM]){
         }
     }
 }
+
+//una estructura por pieza que contenga coordenadas
