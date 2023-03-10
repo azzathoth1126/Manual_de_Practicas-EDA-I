@@ -28,7 +28,7 @@ void llenarArreglo(struct pelicula arreglo [TAM]){
 
     for (iesimo=0 ; iesimo<TAM ; iesimo++) {
         struct pelicula movie;
-        printf("####### Película %d #######\n", iesimo+1);
+        printf("\n####### Película %d #######\n", iesimo+1);
         printf("Ingrese nombre película:");
         setbuf(stdin, NULL);
         scanf("%s", movie.nombre);
@@ -56,17 +56,17 @@ void llenarArreglo(struct pelicula arreglo [TAM]){
 void imprimirArreglo(struct pelicula arreglo [TAM]){
     int iesimo, enesimo;
 
-    printf("####### Contenido del arreglo #######\n");
+    printf("\n\n####### Contenido del arreglo #######\n\n");
 
     for (iesimo=TAM-1 ; iesimo>=0 ; iesimo--) {
-        printf("####### Película %d #######\n", iesimo+1);
+        printf("\n####### Película %d #######\n", iesimo+1);
         printf("PELÍCULA: %s\n", arreglo[iesimo].nombre);
         printf("GÉNERO: %s\n", arreglo[iesimo].genero);
         printf("AÑO: %d\n", arreglo[iesimo].anio);
         printf("DIRECTOR(ES):\n");
 
         for (enesimo=0 ; enesimo<arreglo[iesimo].numDirectores; enesimo++){
-            printf("%s\n", arreglo[iesimo].directores[enesimo]);
+            printf("-->  %s\n", arreglo[iesimo].directores[enesimo]);
         }
     }
 }
