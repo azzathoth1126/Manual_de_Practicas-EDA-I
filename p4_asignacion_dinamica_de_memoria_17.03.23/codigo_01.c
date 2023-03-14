@@ -1,4 +1,4 @@
-// Malloc - Codigo
+// Malloc - Código
 
 #include <stdio.h>
 #include <stdlib.h>
