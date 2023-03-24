@@ -1,11 +1,11 @@
-#include <limits.h>
+#include <limits.h> //para usar la funcion unsigned
 #include <stdio.h>
 #include <stdlib.h>
 
 // Una estructura que representa una pila
 struct Stack {
 	int top;
-	unsigned capacity;
+	unsigned capacity; //para que sea dinamica
 	int* array;
 };
 
