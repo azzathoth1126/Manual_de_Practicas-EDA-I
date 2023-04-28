@@ -58,7 +58,7 @@ struct Node* addEnd(struct Node* last, int data) {
     newNode->data = data;
 
     // Se almacena la dirección del nodo cabeza al siguiente del nuevo nodo
-    newNode->next = newNode;
+    newNode->next = last->next;
 
     // Se apunta el actual último nodo al nuevo nodo
     last->next = newNode;
