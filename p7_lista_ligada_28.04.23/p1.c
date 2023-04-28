@@ -1,3 +1,5 @@
+// Código para implementar operaciones en una lista ligada circular
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,9 +9,9 @@ struct Node {
 };
 
 struct Node* addToEmpty(struct Node* last, int data) {
-    if (last != NULL) {return last;}
+    if (last != NULL) return last;
 
-    //Agraga memoria al nuevo nodo
+    // Asigna memoria al nuevo nodo
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     
     // Se asigna dato al nuevo nodo
@@ -58,6 +60,9 @@ struct Node* addEnd(struct Node* last, int data) {
     // Se almacena la dirección del nodo cabeza al siguiente del nuevo nodo
     newNode->next = newNode;
 
+    // Se apunta el actual último nodo al nuevo nodo
+    last->next = newNode;
+
     // Se hace al nuevo nodo com el último nodo
     last = newNode;
 
@@ -93,7 +98,9 @@ struct Node* addAfter(struct Node* last, int data, int item) {
             return last;  
         }
         p = p->next;
+
     } while (p != last->next);
+
     printf("\nEl nodo dado no esta presente en la lista");
     return last;
 }
@@ -107,6 +114,7 @@ void deleteNode(struct Node** last, int key) {
     if ((*last)->data == key && (*last)->next == *last) {
         free(*last);
         *last = NULL;
+        return;
     }
 
     struct Node *temp = *last, *d;
@@ -135,7 +143,7 @@ void deleteNode(struct Node** last, int key) {
     }
 }
 
-void treverse(struct Node* last) {
+void traverse(struct Node* last) {
     struct Node* p;
 
     if (last == NULL) {
@@ -160,13 +168,13 @@ int main() {
 
     last = addAfter(last, 10, 2);
 
-    treverse(last);
+    traverse(last);
 
     deleteNode(&last, 8);
 
     printf("\n");
 
-    treverse(last);
+    traverse(last);
     
     return 0;
 }
