@@ -7,10 +7,11 @@ struct Node {
 };
 
 struct Node* addToEmpty(struct Node* last, int data) {
-    if (last != NULL) return last;
+    if (last != NULL) {return last;}
 
     //Agraga memoria al nuevo nodo
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    
     // Se asigna dato al nuevo nodo
     newNode->data = data;
 
